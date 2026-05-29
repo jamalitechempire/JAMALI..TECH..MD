@@ -1,14 +1,14 @@
 {
-  "name": "momy-kidy-bot",
+  "name": "jamali-md-bot",
   "version": "s1",
-  "description": "MOMY-KIDY WhatsApp Bot Base",
+  "description": "JAMALI MD - Advanced WhatsApp Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "pm2-start": "pm2 start index.js --name momy-kidy --watch",
-    "pm2-stop": "pm2 stop momy-kidy",
-    "pm2-restart": "pm2 restart momy-kidy",
-    "pm2-logs": "pm2 logs momy-kidy",
+    "pm2-start": "pm2 start index.js --name jamali-md --watch",
+    "pm2-stop": "pm2 stop jamali-md",
+    "pm2-restart": "pm2 restart jamali-md",
+    "pm2-logs": "pm2 logs jamali-md",
     "pm2-status": "pm2 status",
     "pm2-monit": "pm2 monit"
   },
