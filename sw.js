@@ -1,5 +1,5 @@
-// sw.js - MOMY-KIDY PWA Service Worker
-const CACHE_NAME = 'momy-kidy-v1';
+// sw.js - JAMALI MD PWA Service Worker
+const CACHE_NAME = 'jamali-md-v1';
 const urlsToCache = [
   '/',
   '/dashboard',
