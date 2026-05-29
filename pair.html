@@ -6,12 +6,13 @@
 <meta name="theme-color" content="#0a0a0a">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="MOMY-KIDY Pair">
+<meta name="apple-mobile-web-app-title" content="JAMALI MD Pair">
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
-<title>🔐 MOMY-KIDY BOT | Pair Device</title>
+<title>⚡ JAMALI MD | Pair Device</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 :root{
@@ -243,7 +244,6 @@ input::placeholder{
   color:rgba(0,255,136,0.4);
 }
 
-/* BUTTON STYLES */
 button.main-btn{
   width:100%;
   padding:18px;
@@ -291,7 +291,6 @@ button.main-btn:active:not(:disabled){
   transform:translateY(-1px) scale(0.98);
 }
 
-/* LOADING STATE */
 button.main-btn.loading{
   background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
   color:var(--cyan);
@@ -454,86 +453,6 @@ footer::before{
   background:linear-gradient(90deg,transparent,var(--cyan),transparent);
 }
 
-/* Install Banner */
-.install-banner{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  right:20px;
-  background:linear-gradient(135deg,rgba(0,246,255,0.2),rgba(180,0,255,0.2));
-  backdrop-filter:blur(20px);
-  border-radius:20px;
-  padding:15px;
-  text-align:center;
-  z-index:100;
-  border:1px solid rgba(0,246,255,0.3);
-  display:none;
-  animation:slideUp 0.5s ease;
-}
-
-@keyframes slideUp{
-  from{transform:translateY(100px);opacity:0}
-  to{transform:translateY(0);opacity:1}
-}
-
-.install-banner-content{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.install-banner-text{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.install-banner-text i{
-  font-size:1.5rem;
-  color:var(--cyan);
-}
-
-.install-banner-text strong{
-  font-size:1rem;
-}
-
-.install-banner-text p{
-  font-size:0.7rem;
-  opacity:0.7;
-}
-
-.install-banner-buttons{
-  display:flex;
-  gap:10px;
-}
-
-.install-btn{
-  background:linear-gradient(135deg,var(--cyan),var(--purple));
-  border:none;
-  padding:10px 20px;
-  border-radius:12px;
-  color:#fff;
-  font-weight:600;
-  cursor:pointer;
-  transition:all 0.3s;
-}
-
-.install-btn:hover{
-  transform:scale(1.05);
-}
-
-.later-btn{
-  background:rgba(255,255,255,0.1);
-  border:1px solid rgba(255,255,255,0.2);
-  padding:10px 15px;
-  border-radius:12px;
-  color:#fff;
-  cursor:pointer;
-}
-
-/* Toast */
 .toast{
   position:fixed;
   bottom:100px;
@@ -557,27 +476,6 @@ footer::before{
 .toast.success{border-color:#00ff88;color:#00ff88;}
 .toast.error{border-color:#ff4444;color:#ff4444;}
 .toast.info{border-color:#00f6ff;color:#00f6ff;}
-
-.back-btn{
-  position:fixed;
-  top:20px;
-  left:20px;
-  background:rgba(255,255,255,0.1);
-  border:1px solid rgba(255,255,255,0.2);
-  padding:10px 20px;
-  border-radius:12px;
-  color:#fff;
-  text-decoration:none;
-  transition:all 0.3s;
-  z-index:100;
-  font-size:0.9rem;
-  backdrop-filter:blur(10px);
-}
-
-.back-btn:hover{
-  background:rgba(0,246,255,0.2);
-  transform:translateX(-5px);
-}
 
 ::-webkit-scrollbar{
   width:8px;
@@ -607,11 +505,6 @@ footer::before{
     letter-spacing:4px;
   }
   
-  .install-banner-content{
-    flex-direction:column;
-    text-align:center;
-  }
-  
   .toast{
     white-space:normal;
     text-align:center;
@@ -639,13 +532,25 @@ footer::before{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
 }
+
+/* Owner & Channel info row */
+.info-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 15px;
+  border-radius: 40px;
+  margin: 15px 0;
+  font-size: 0.8rem;
+}
+.info-row i{ margin-right: 5px; color: var(--cyan); }
+.info-row a{ color: var(--green); text-decoration: none; }
 </style>
 </head>
-
 <body>
 
 <div class="bg-mesh"></div>
-
 <div class="particles">
   <div class="particle"></div>
   <div class="particle"></div>
@@ -653,21 +558,29 @@ footer::before{
   <div class="particle"></div>
   <div class="particle"></div>
 </div>
-
 <div id="overlay"></div>
-
 <audio id="bgMusic" src="https://files.catbox.moe/iwpfp2.mp3" loop></audio>
 
-<a href="dashboard.html" class="back-btn"><i class="fas fa-arrow-left"></i> Dashboard</a>
+<!-- No back button (removed) -->
 
 <div class="container">
-  <div class="premium-badge">⭐ Premium Pro Bot 2026</div>
+  <div class="premium-badge">⭐ JAMALI MD PREMIUM 2026</div>
   
-  <h1>MOMY-KIDY BOT</h1>
+  <h1>JAMALI MD</h1>
+  
+  <!-- Owner & Channel Info -->
+  <div class="info-row">
+    <span><i class="fas fa-crown"></i> Owner</span>
+    <span><strong>JAMALI TECH TZ</strong> <i class="fab fa-whatsapp" style="color:#25D366"></i> <a href="https://wa.me/255784062158">+255 784 062 158</a></span>
+  </div>
+  <div class="info-row">
+    <span><i class="fas fa-hashtag"></i> Channel</span>
+    <span><a href="https://whatsapp.com/channel/0029VbC7AgJK5cD71vGIpO3h" target="_blank">Join WhatsApp Channel</a></span>
+  </div>
   
   <div class="status-container">
     <div class="status-dot"></div>
-    <div class="status" id="statusText">SYSTEM STATUS : ONLINE</div>
+    <div class="status" id="statusText">SYSTEM ONLINE · READY</div>
   </div>
 
   <div class="input-wrapper">
@@ -687,27 +600,10 @@ footer::before{
   <div class="controls">
     <button onclick="toggleMusic()"><i class="fas fa-music"></i> Music</button>
     <button onclick="toggleOverlay()"><i class="fas fa-moon"></i> Overlay</button>
-    <button onclick="window.location.href='dashboard.html'"><i class="fas fa-home"></i> Home</button>
+    <button onclick="window.location.reload()"><i class="fas fa-sync-alt"></i> Refresh</button>
   </div>
 
-  <footer>♱♱♱♱♱ 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐒𝐢𝐥𝐚 𝐓𝐞𝐜𝐡 ♱♱♱♱</footer>
-</div>
-
-<!-- Install App Banner -->
-<div id="installBanner" class="install-banner">
-  <div class="install-banner-content">
-    <div class="install-banner-text">
-      <i class="fas fa-download"></i>
-      <div>
-        <strong>Install MOMY-KIDY App</strong>
-        <p>Get faster access with our native app</p>
-      </div>
-    </div>
-    <div class="install-banner-buttons">
-      <button class="install-btn" onclick="installPWA()"><i class="fas fa-download"></i> Install</button>
-      <button class="later-btn" onclick="closeInstallBanner()">Later</button>
-    </div>
-  </div>
+  <footer>⚡ Powered by <strong>JAMALI TECH TZ</strong> | © 2026</footer>
 </div>
 
 <div id="toast" class="toast"></div>
@@ -718,7 +614,6 @@ let music=false, overlay=true, lang="EN";
 let currentCode = "";
 let isGenerating = false;
 
-// Toast notification
 function showToast(message, type = 'info') {
     const toast = document.getElementById('toast');
     toast.textContent = message;
@@ -823,44 +718,7 @@ async function getCode(){
   }
 }
 
-// ==================== PWA INSTALLATION ====================
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    document.getElementById('installBanner').style.display = 'block';
-    console.log('[PWA] Install prompt available');
-});
-
-function installPWA() {
-    if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                showToast('App installed successfully! 🎉', 'success');
-            } else {
-                showToast('Installation cancelled', 'info');
-            }
-            deferredPrompt = null;
-            document.getElementById('installBanner').style.display = 'none';
-        });
-    } else {
-        showToast('Install prompt not available. Use browser menu to install.', 'info');
-    }
-}
-
-function closeInstallBanner() {
-    document.getElementById('installBanner').style.display = 'none';
-}
-
-// Check if already installed
-window.addEventListener('appinstalled', (evt) => {
-    console.log('[PWA] App was installed');
-    showToast('Thank you for installing MOMY-KIDY Bot! 🚀', 'success');
-});
-
-// Register Service Worker
+// Register Service Worker (optional)
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js').then((registration) => {
@@ -871,6 +729,5 @@ if ('serviceWorker' in navigator) {
     });
 }
 </script>
-
 </body>
 </html>
